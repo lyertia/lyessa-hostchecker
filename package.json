@@ -1,0 +1,16 @@
+{
+  "name": "lyessa-hostchecker",
+  "version": "1.0.0",
+  "description": "Made for lyessa.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Lyertia",
+  "license": "ISC",
+  "dependencies": {
+    "akame.db": "^2.1.0",
+    "discord.js": "^12.2.0",
+    "sysload": "^1.0.1"
+  }
+}
