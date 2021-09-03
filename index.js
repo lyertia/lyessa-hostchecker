@@ -33,7 +33,7 @@ client.on("ready", async () => {
     .setTimestamp()
     .setFooter("Made by lyertia")
 
-        if(lyessa.presence.status !== "online" ) {
+        if(lyessa.presence.status == "offline" ) {
             if(db.get("offline")) return;
             client.channels.cache.get(settings.downlog_channel).send(embed)
             db.set("offline", true)
@@ -46,9 +46,9 @@ client.on("ready", async () => {
 });
 
 client.on("message", async message => {
-    if (message.author.id === settings.owner_id && message.content.startsWith(settings.cmd_prefix)) {
+    if (message.author.id == settings.owner_id && message.content.startsWith(settings.cmd_prefix)) {
         if (message.content.slice(3)) {
-            if (message.content.startsWith(settings.cmd_prefix)) {
+            if (message.channel.id == settings.exec_channel) {
                 var code = message.content.slice(3)
                 exec(code, (error, stdout, stderr) => {
                     if (!error && stdout) {
@@ -60,7 +60,7 @@ client.on("message", async message => {
                         message.channel.send("```" + clean(stderr) + "```")
                     }   })
             } else {
-                return message.channel.send("You are not authorized.");
+                return message.channel.send("Not authorized.");
             }
         }
     }
