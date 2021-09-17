@@ -15,9 +15,9 @@ client.on("ready", async () => {
                         if (stdout.length > 1000) {
                             stdout = stdout.substr(stdout.length - 999, stdout.length)
                         }
-                        console.log("```" + clean(stdout) + "```")
+                        console.log(clean(stdout))
                     } else {
-                        console.log("```" + clean(stderr) + "```")
+                        console.log(clean(stderr))
                     }   })
                 db.delete("countdown")
                 db.delete("alert")
