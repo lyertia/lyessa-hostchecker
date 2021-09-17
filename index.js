@@ -1,6 +1,9 @@
 const Discord = require('discord.js');
 const db = require("akame.db")
-const client = new Discord.Client();
+const client = new Discord.Client({
+    fetchAllMembers: true,
+});
+module.exports.client = () => client;
 const settings = require('./settings.json');
 const tokens = require('./tokens.json');
 const { exec } = require('child_process')
@@ -15,6 +18,7 @@ const clean = text => {
     else
         return text
 }
+module.exports.clean = () => clean;
 
 client.on("ready", async () => {
     console.log('Connected.');
@@ -24,6 +28,7 @@ client.on("ready", async () => {
 });
 
 client.on("ready", async () => {
+        db.deleteAll()
     setInterval(function () {
         const lyessa = client.users.cache.get(settings.bot_user)
         const embed = new Discord.MessageEmbed()
@@ -66,3 +71,4 @@ client.on("message", async message => {
     }
 })
 client.login(tokens.discord);
+require("./botAlert.js")
