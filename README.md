@@ -7,4 +7,4 @@
 
 ### Support
 
-- Contact me on lyertia@lyessa.live mail or `" lyertia#1111` discord
+- Contact me on lyertia@lyessa.live mail or https://lyessa.live/Discord discord
