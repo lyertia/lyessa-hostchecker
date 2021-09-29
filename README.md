@@ -12,7 +12,7 @@
 
 ### Note
 
-Bot restart action is requires pm2 please look at https://pm2.io (You can use any tool for this action)
+Bot restart action is requires pm2 please look at https://pm2.io (You can use any another tool like pm2 for this action)
 
 
 ### Support
