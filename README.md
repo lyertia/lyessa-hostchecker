@@ -17,4 +17,4 @@ Bot restart action is requires pm2 please look at https://pm2.io (You can use an
 
 ### Support
 
-- Contact me on lyertia@lyessa.live mail or https://lyessa.live/Discord discord
+- Contact me on lyertiadev@gmail.com mail or " lyertia#9828 discord
